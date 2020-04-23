@@ -453,6 +453,30 @@ MonoBehaviour:
     skit_id: 0
     skit: 
     isDeleted: 0
+--- !u!114 &529969729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529969727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303b91cb877272847bcd1ea66bd38915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &529969731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529969727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0c3259be8da69429aa626fa91e2aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &579056222 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 974467357865983742, guid: 5ab6c45a974a72c43b48d4229aff6ede,

@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3784203607204849593}
   - component: {fileID: 3784203607204849592}
-  - component: {fileID: -2814923673073341933}
+  - component: {fileID: 3361489709703500745}
+  - component: {fileID: 3551636742092207182}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,7 +48,7 @@ MonoBehaviour:
   loadingScreen: {fileID: 0}
   loadingSlider: {fileID: 0}
   finishedLoadingText: {fileID: 0}
---- !u!114 &-2814923673073341933
+--- !u!114 &3361489709703500745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,11 +57,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 3784203607204849599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca5770128159104e869019a08eb3f23, type: 3}
+  m_Script: {fileID: 11500000, guid: 303b91cb877272847bcd1ea66bd38915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newSkit: []
-  skitChanges:
+  SkitEntry:
     skit_id: 0
     skit: 
     isDeleted: 0
+--- !u!114 &3551636742092207182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784203607204849599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0c3259be8da69429aa626fa91e2aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
