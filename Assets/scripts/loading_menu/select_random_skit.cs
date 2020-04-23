@@ -8,10 +8,10 @@ public class select_random_skit : MonoBehaviour
     private void Awake()
     {
         text = GetComponent<Text>();
-        readSkitsJson();
+        selectRandomSkit();
     }
 
-    void readSkitsJson()
+    void selectRandomSkit()
     {
         string json = File.ReadAllText("Assets/resources/skits.json");
         Skits skits = JsonUtility.FromJson<Skits>("{ \"skits\" : " + json + "}");
