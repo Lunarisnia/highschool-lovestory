@@ -8,6 +8,10 @@ public class game_manager : MonoBehaviour
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private Text finishedLoadingText;
+    private void Start() {
+        new db_service().dbOpen();
+    }
+
     public void loadLevel(int sceneIndex)
     {
         StartCoroutine(load(sceneIndex));

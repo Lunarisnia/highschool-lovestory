@@ -427,56 +427,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7729749881754367732}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &529969727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3784203607204849599, guid: 0eb90698ac0466941982d4db22445eec,
-    type: 3}
-  m_PrefabInstance: {fileID: 3784203608954897004}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &529969728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529969727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca5770128159104e869019a08eb3f23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newSkit:
-  - skit_id: 0
-    skit: MArnamos
-    isDeleted: 0
-  skitChanges:
-    skit_id: 0
-    skit: 
-    isDeleted: 0
---- !u!114 &529969729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529969727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 303b91cb877272847bcd1ea66bd38915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &529969731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529969727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d0c3259be8da69429aa626fa91e2aa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &579056222 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 974467357865983742, guid: 5ab6c45a974a72c43b48d4229aff6ede,
@@ -1007,7 +957,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3784203608954897004}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529969727}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c136336f516726d4e9f6b9f2c200938d, type: 3}
@@ -1281,6 +1231,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3361489709703500745, guid: 0eb90698ac0466941982d4db22445eec,
+        type: 3}
+      propertyPath: SkitEntry.skit
+      value: Can i eat that thing? - Momohana
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361489709703500745, guid: 0eb90698ac0466941982d4db22445eec,
+        type: 3}
+      propertyPath: SkitEntry.content
+      value: Find me an iceream - Momohana
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361489709703500745, guid: 0eb90698ac0466941982d4db22445eec,
+        type: 3}
+      propertyPath: SkitEntry.id
+      value: 55a1e7e6-7eda-4fe8-8cf2-1347d0f5a5db
+      objectReference: {fileID: 0}
     - target: {fileID: 3784203607204849592, guid: 0eb90698ac0466941982d4db22445eec,
         type: 3}
       propertyPath: loadingScreen
@@ -1358,6 +1323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7609074589670188217, guid: 0eb90698ac0466941982d4db22445eec, type: 3}
+    - {fileID: 3551636742092207182, guid: 0eb90698ac0466941982d4db22445eec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0eb90698ac0466941982d4db22445eec, type: 3}
 --- !u!1001 &7729749881754367732
 PrefabInstance:

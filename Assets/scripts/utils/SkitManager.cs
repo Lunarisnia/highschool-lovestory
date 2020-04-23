@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class SkitManager : MonoBehaviour
 {
-    skit_service skit = new skit_service();
     public SkitModel SkitEntry;
     [ContextMenu("Get All Skit")]
     public void getAllSkit()
@@ -23,6 +22,20 @@ public class SkitManager : MonoBehaviour
     public void addNewSkit()
     {
         int result = new skit_service().addNewSkit(SkitEntry);
+        Debug.Log(result);
+    }
+
+    [ContextMenu("Update Skit")]
+    public void updateSkit()
+    {
+        int result = new skit_service().updateSkit(SkitEntry);
+        Debug.Log(result);
+    }
+
+    [ContextMenu("Delete Skit")]
+    public void deleteSkit()
+    {
+        int result = new skit_service().removeSkit(SkitEntry);
         Debug.Log(result);
     }
 }

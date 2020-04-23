@@ -4,15 +4,10 @@ using System.IO;
 using System.Data;
 
 
-public class db_service : MonoBehaviour
+public class db_service
 {
-    // Start is called before the first frame update
     string Skit = "CREATE TABLE IF NOT EXISTS [skit] ([id] TEXT PRIMARY KEY NOT NULL,[content] TEXT  NOT NULL)";
     IDbConnection dbcon;
-    void Awake()
-    {
-        dbOpen();
-    }
 
     public IDbConnection dbOpen()
     {
