@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
-
+using SimpleJSON;
 public class select_random_skit : MonoBehaviour
 {
     private Text text;
@@ -13,10 +12,15 @@ public class select_random_skit : MonoBehaviour
 
     void selectRandomSkit()
     {
-        string json = File.ReadAllText("Assets/resources/skits.json");
-        Skits skits = JsonUtility.FromJson<Skits>("{ \"skits\" : " + json + "}");
-
-        int randomIndex = Random.Range(0, skits.skits.Length);
-        text.text = skits.skits[randomIndex].skit;
+        while (true)
+        {
+            JSONNode skits = new Skits().readJsonFile();
+            int randomIndex = Random.Range(0, skits.Count);
+            if (skits[randomIndex]["isDeleted"] == 0)
+            {
+                text.text = skits[randomIndex]["skit"];
+                break;
+            }
+        }
     }
 }
