@@ -9,10 +9,12 @@ public class player_controller : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float runningSpeed;
     private Vector2 moveVelocity;
+    private Animator animator;
 
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class player_controller : MonoBehaviour
     void applyInput()
     {
         move();
+        animate();
     }
 
     void move()
@@ -41,5 +44,13 @@ public class player_controller : MonoBehaviour
         {
             moveVelocity = axis.normalized * speed;
         }
+    }
+
+    void animate()
+    {
+        Vector2 axis = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        animator.SetFloat("horizontal", axis.normalized.x);
+        animator.SetFloat("vertical", axis.normalized.y);
+        animator.SetFloat("magnitude", axis.normalized.magnitude);
     }
 }

@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: b30505bbca269a34bb9273945ac17fa9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3757122801305133156
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_0
+  - first:
+      213: -5191105463879480753
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_1
+  - first:
+      213: 372902810945118171
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_2
+  - first:
+      213: -7601569351764451531
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_3
+  - first:
+      213: 1459009300303097180
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_4
+  - first:
+      213: 7517474899389038442
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_5
+  - first:
+      213: -5858228915100973431
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_6
+  - first:
+      213: 2645420045059285327
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_7
+  - first:
+      213: 3281740622824042029
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_8
+  - first:
+      213: 4820802650381520288
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_9
+  - first:
+      213: 5214881477572838381
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_10
+  - first:
+      213: 7301719349250646558
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_11
+  - first:
+      213: 5374728736788538788
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_12
+  - first:
+      213: 8123155916440465043
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_13
+  - first:
+      213: -7073608564875250051
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_14
+  - first:
+      213: -8069288935465713466
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_15
+  - first:
+      213: 7405308048403006215
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_16
+  - first:
+      213: -3972701698106115205
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_17
+  - first:
+      213: 1084173474643575335
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_18
+  - first:
+      213: -3768915520335320278
+    second: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_19
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 72
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 265
+        width: 94
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fdfa2e7b40cdbc0800000000000000
+      internalID: -3757122801305133156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 269
+        width: 95
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4acfd1951d75f7b0800000000000000
+      internalID: -5191105463879480753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_2
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 265
+        width: 94
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfd02e7121dc2500800000000000000
+      internalID: 372902810945118171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_3
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 269
+        width: 94
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f559c03fcc18690800000000000000
+      internalID: -7601569351764451531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 265
+        width: 94
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5dae8c7a317f3410800000000000000
+      internalID: 1459009300303097180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_5
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 261
+        width: 95
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fbff9779f635860800000000000000
+      internalID: 7517474899389038442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_6
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 265
+        width: 94
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9860c7607d363bea0800000000000000
+      internalID: -5858228915100973431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_7
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 261
+        width: 94
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41e473d38b66b420800000000000000
+      internalID: 2645420045059285327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 139
+        width: 74
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e656485b51b8d20800000000000000
+      internalID: 3281740622824042029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_9
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 143
+        width: 70
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad8044087ee6e240800000000000000
+      internalID: 4820802650381520288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_10
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 139
+        width: 74
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de34e70031bfe5840800000000000000
+      internalID: 5214881477572838381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_11
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 143
+        width: 70
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e126eaddf0be45560800000000000000
+      internalID: 7301719349250646558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 10
+        width: 70
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a56d504f4fd69a40800000000000000
+      internalID: 5374728736788538788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_13
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 15
+        width: 70
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39eeb86844f3bb070800000000000000
+      internalID: 8123155916440465043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_14
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 11
+        width: 70
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d763372ec7e75dd90800000000000000
+      internalID: -7073608564875250051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 152-1524584_sans-walking-sprite-sheet-sprite-sans-rpg-maker_15
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 13
+        width: 70
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c083935770240090800000000000000
+      internalID: -8069288935465713466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -22,5 +22,6 @@ public class select_random_skit : MonoBehaviour
         }
         index = Random.Range(0, skits.Count);
         text.text = skits[index];
+        reader.Close();
     }
 }
