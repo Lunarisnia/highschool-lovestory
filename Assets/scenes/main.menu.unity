@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 326978668}
   - component: {fileID: 326978667}
   - component: {fileID: 326978669}
+  - component: {fileID: 326978670}
   m_Layer: 5
   m_Name: main.menu.background
   m_TagString: Untagged
@@ -295,7 +296,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.010780013, y: 0}
-  m_SizeDelta: {x: 1278.2, y: 720}
+  m_SizeDelta: {x: 1804.1, y: 1016.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326978667
 MonoBehaviour:
@@ -349,6 +350,25 @@ MonoBehaviour:
   - {fileID: 2800000, guid: b15ffee6ebd107845946975978830e46, type: 3}
   - {fileID: 2800000, guid: 7ce3010668c54734f9d0fbcd6fbd8771, type: 3}
   - {fileID: 2800000, guid: 6e6655a33ea0bbb4ebd10b7571a4926d, type: 3}
+--- !u!95 &326978670
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326978665}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4bcb37786ef5154f9f9c03c0fede1b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &396548109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,18 +1253,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3361489709703500745, guid: 0eb90698ac0466941982d4db22445eec,
         type: 3}
-      propertyPath: SkitEntry.skit
-      value: Can i eat that thing? - Momohana
-      objectReference: {fileID: 0}
-    - target: {fileID: 3361489709703500745, guid: 0eb90698ac0466941982d4db22445eec,
-        type: 3}
-      propertyPath: SkitEntry.content
-      value: Find me an iceream - Momohana
-      objectReference: {fileID: 0}
-    - target: {fileID: 3361489709703500745, guid: 0eb90698ac0466941982d4db22445eec,
-        type: 3}
       propertyPath: SkitEntry.id
-      value: 55a1e7e6-7eda-4fe8-8cf2-1347d0f5a5db
+      value: e3d52d04-5a36-4216-88c9-5bc476fcbd80
       objectReference: {fileID: 0}
     - target: {fileID: 3784203607204849592, guid: 0eb90698ac0466941982d4db22445eec,
         type: 3}
@@ -1321,6 +1331,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3875797853130921620, guid: 0eb90698ac0466941982d4db22445eec,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3af306ae3567b4144a3c099126b4168e, type: 3}
     m_RemovedComponents:
     - {fileID: 7609074589670188217, guid: 0eb90698ac0466941982d4db22445eec, type: 3}
     - {fileID: 3551636742092207182, guid: 0eb90698ac0466941982d4db22445eec, type: 3}

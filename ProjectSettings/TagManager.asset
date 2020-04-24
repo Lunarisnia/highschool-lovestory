@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 709840863
+    locked: 0
+  - name: Overworld
+    uniqueID: 3139563933
+    locked: 0
+  - name: Player
+    uniqueID: 3394643711
+    locked: 0
+  - name: Item
+    uniqueID: 2707964419
+    locked: 0
