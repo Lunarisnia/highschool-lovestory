@@ -1492,6 +1492,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7820656098922922337, guid: 45b77430546fdef48a0295f7e548ee3e,
+        type: 3}
+      propertyPath: skits.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: baa0d73c190f94349b7520f4574219d9,
+        type: 2}
     - target: {fileID: 8496817115139926380, guid: 45b77430546fdef48a0295f7e548ee3e,
         type: 3}
       propertyPath: m_Color.r

@@ -8,11 +8,6 @@ public class game_manager : MonoBehaviour
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private Text finishedLoadingText;
-    private void Start()
-    {
-        var dbConn = new db_service().dbOpen();
-        dbConn.Close();
-    }
 
     public void loadLevel(int sceneIndex)
     {

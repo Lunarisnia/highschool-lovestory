@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class select_random_skit : MonoBehaviour
 {
     private Text text;
+    public Skit[] skits;
     private void Awake()
     {
         text = GetComponent<Text>();
@@ -13,15 +14,7 @@ public class select_random_skit : MonoBehaviour
 
     void selectRandomSkit()
     {
-        int index;
-        List<string> skits = new List<string>();
-        IDataReader reader = new skit_service().getAllSkit();
-        while (reader.Read())
-        {
-            skits.Add(reader[1].ToString());
-        }
-        index = Random.Range(0, skits.Count);
-        text.text = skits[index];
-        reader.Close();
+        int index = Random.Range(0, skits.Length);
+        text.text = skits[index].content;
     }
 }

@@ -90,6 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e121e05b6bbf14f46aee63d439d0de8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skits:
+  - {fileID: 11400000, guid: baa0d73c190f94349b7520f4574219d9, type: 2}
+  - {fileID: 11400000, guid: 5d714fef5eaacbd489e1e3c86ec2e768, type: 2}
+  - {fileID: 11400000, guid: a22747c7c71aaa54dab6464eccdb4b3d, type: 2}
 --- !u!1 &3949129068209378171
 GameObject:
   m_ObjectHideFlags: 0
