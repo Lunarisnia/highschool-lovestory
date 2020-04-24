@@ -36,7 +36,7 @@ public class player_controller : MonoBehaviour
     void move()
     {
         Vector2 axis = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if (Input.GetAxisRaw("Run") > 0)
+        if (Input.GetButton("Run"))
         {
             moveVelocity = axis.normalized * (speed + runningSpeed);
         }
