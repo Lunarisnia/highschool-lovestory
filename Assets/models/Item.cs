@@ -10,5 +10,5 @@ public class Item : ScriptableObject
     public string description = "description.";
     public int price = 0;
     public enum Category { Food, Flower, Book, Junk };
-        public Category category = Category.Food;
+    public Category category = Category.Food;
 }

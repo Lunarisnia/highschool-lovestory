@@ -2,13 +2,42 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
+public static class GameManager
+{
+    public static PlayerData player = new PlayerData();
+    public static int maxMoney = 999999;
+    public static int sec = 0;
+    public static int hour = 0;
+    public static void saveGame()
+    {
+
+    }
+}
 public class game_manager : MonoBehaviour
 {
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private Text finishedLoadingText;
+    Coroutine clockRoutine;
+    public TextMeshProUGUI clock;
+    private void Start()
+    {
+        clockRoutine = StartCoroutine(startClock());
+    }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            StopCoroutine(clockRoutine);
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            clockRoutine = StartCoroutine(startClock());
+        }
+    }
     public void loadLevel(int sceneIndex)
     {
         StartCoroutine(load(sceneIndex));
@@ -55,5 +84,36 @@ public class game_manager : MonoBehaviour
             yield return null;
         }
 
+    }
+    IEnumerator startClock()
+    {
+        while (true)
+        {
+            if (GameManager.hour < 12)
+            {
+                clock.text = string.Format("{0}:{1} am", LeadingZero(GameManager.hour), LeadingZero(GameManager.sec));
+            }
+            else
+            {
+                clock.text = string.Format("{0}:{1} pm", LeadingZero(GameManager.hour), LeadingZero(GameManager.sec));
+            }
+
+            yield return new WaitForSeconds(1.5f);
+            GameManager.sec++;
+            if (GameManager.sec == 60)
+            {
+                GameManager.hour++;
+                GameManager.sec = 0;
+            }
+            if (GameManager.hour > 24)
+            {
+                GameManager.hour = 0;
+            }
+        }
+    }
+
+    string LeadingZero(int number)
+    {
+        return number.ToString().PadLeft(2, '0');
     }
 }

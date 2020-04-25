@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4d30bb6f20a0ca419695467a9a0c3f2
+guid: 42fc54e58a87a6249ac3b7bf8863470a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: squeaky chalk sound
+  fontName: Chalktastic
   fontNames:
-  - squeaky chalk sound
+  - Chalktastic
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

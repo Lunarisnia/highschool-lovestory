@@ -8,11 +8,13 @@ public class player_controller : MonoBehaviour
     Rigidbody2D player;
     [SerializeField] private float speed;
     [SerializeField] private float runningSpeed;
+    private Inventory inventory;
     private Vector2 moveVelocity;
     private Animator animator;
 
     void Start()
     {
+        inventory = GetComponent<Inventory>();
         player = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -31,8 +33,24 @@ public class player_controller : MonoBehaviour
     {
         move();
         animate();
+        openInventory();
+        addMoneh(1252);
     }
 
+    void addMoneh(int amount)
+    {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+
+            inventory.addMoney(amount);
+            Debug.Log(GameManager.player.money);
+        }
+
+    }
+    void openInventory()
+    {
+        inventory.openInventory();
+    }
     void move()
     {
         Vector2 axis = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
