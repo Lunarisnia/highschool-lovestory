@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ItemObject : MonoBehaviour
 {
@@ -13,21 +11,23 @@ public class ItemObject : MonoBehaviour
 
         spriteRenderer.sprite = item.sprite;
     }
-    
+
     private void OnTriggerStay2D(Collider2D other) {
+        Player player = other.GetComponent<Player>();
+
         if (Input.GetButtonDown("Interact"))
         {
-            for (int i = 0; i < GameManager.player.items.Length; i++)
+            for (int i = 0; i < player.items.Length; i++)
             {
-                if (GameManager.player.items[i] == null)
+                if (player.items[i] == null)
                 {
-                    GameManager.player.items[i] = item;
+                    player.items[i] = item;
                     Destroy(gameObject);
                     break;
                 }
                 else
                 {
-                    if (i == GameManager.player.items.Length - 1)
+                    if (i == player.items.Length - 1)
                     {
                         Debug.Log("INVENTORY FULL");
                     }

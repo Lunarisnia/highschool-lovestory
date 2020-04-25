@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-
 public class player_controller : MonoBehaviour
 {
-    Rigidbody2D player;
+    private Player player;
+    Rigidbody2D playerRb;
     [SerializeField] private float speed;
     [SerializeField] private float runningSpeed;
     private Inventory inventory;
@@ -14,8 +11,9 @@ public class player_controller : MonoBehaviour
 
     void Start()
     {
+        player = GetComponent<Player>();
         inventory = GetComponent<Inventory>();
-        player = GetComponent<Rigidbody2D>();
+        playerRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -26,7 +24,7 @@ public class player_controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        player.MovePosition(player.position + moveVelocity * Time.fixedDeltaTime);
+        playerRb.MovePosition(playerRb.position + moveVelocity * Time.fixedDeltaTime);
     }
 
     void applyInput()
@@ -34,18 +32,6 @@ public class player_controller : MonoBehaviour
         move();
         animate();
         openInventory();
-        addMoneh(1252);
-    }
-
-    void addMoneh(int amount)
-    {
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-
-            inventory.addMoney(amount);
-            Debug.Log(GameManager.player.money);
-        }
-
     }
     void openInventory()
     {

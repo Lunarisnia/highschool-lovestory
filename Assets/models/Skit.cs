@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
-using System.IO;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Skit", menuName = "Skit/New")]
 public class Skit : ScriptableObject

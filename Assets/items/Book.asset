@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68dc4c498d506b5479fab3eb3a35b369, type: 3}
   m_Name: Book
   m_EditorClassIdentifier: 
+  id: 6995f82f-e82e-4740-88b7-d70fc248b5b3
   sprite: {fileID: 3281740622824042029, guid: b30505bbca269a34bb9273945ac17fa9, type: 3}
   itemName: Book
   description: A Book

@@ -3,44 +3,103 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public static class GameManager
 {
-    public static PlayerData player = new PlayerData();
     public static int maxMoney = 999999;
-    public static int sec = 0;
-    public static int hour = 0;
-    public static void saveGame()
-    {
 
+    public static int addMoney(Player player, int amount)
+    {
+        int lastMoney = player.money;
+        player.money += amount;
+        if (player.money > GameManager.maxMoney)
+        {
+            player.money = GameManager.maxMoney;
+        }
+        return lastMoney;
+    }
+
+    public static void saveGame(Player player)
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream stream = new FileStream(API.getDataPath(player.playerName), FileMode.OpenOrCreate);
+        PlayerData playerData = new PlayerData(player);
+        binaryFormatter.Serialize(stream, playerData);
+        stream.Close();
+    }
+
+    public static PlayerData loadSave(string playerName)
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        if (File.Exists(API.getDataPath(playerName)))
+        {
+            FileStream stream = new FileStream(API.getDataPath(playerName), FileMode.Open);
+
+            PlayerData data = binaryFormatter.Deserialize(stream) as PlayerData;
+            stream.Close();
+            return data;
+        }
+        else
+        {
+            Debug.Log("Save file not found.");
+            return null;
+        }
     }
 }
+
 public class game_manager : MonoBehaviour
 {
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private Text finishedLoadingText;
-    Coroutine clockRoutine;
-    public TextMeshProUGUI clock;
-    private void Start()
-    {
-        clockRoutine = StartCoroutine(startClock());
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            StopCoroutine(clockRoutine);
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            clockRoutine = StartCoroutine(startClock());
-        }
-    }
+    [SerializeField] private Player player;
+    public TextMeshProUGUI moneyHud;
     public void loadLevel(int sceneIndex)
     {
         StartCoroutine(load(sceneIndex));
+    }
+
+    public void saveGame()
+    {
+        GameManager.saveGame(player);
+    }
+
+    public void loadGame()
+    {
+        PlayerData data = GameManager.loadSave(player.playerName);
+        Transform playerTf = player.GetComponent<Transform>();
+        player.money = data.money;
+        moneyHud.text = player.money.ToString();
+        player.sec = data.sec;
+        player.hour = data.hour;
+        playerTf.position = new Vector3(data.playerPosition[0], data.playerPosition[1], data.playerPosition[2]);
+    }
+
+    public void addMoney(int amount)
+    {
+        int lastMoney = GameManager.addMoney(player, amount);
+        StartCoroutine(increaseMoney(lastMoney, player.money));
+    }
+
+    IEnumerator increaseMoney(int lastMoney, int newMoney)
+    {
+        int currentMoney = lastMoney;
+        int range = newMoney - lastMoney;
+        int valueLeft = range % 222;
+        int multiplier = Mathf.RoundToInt((range - valueLeft) / 222);
+        if (valueLeft > 0)
+        {
+            currentMoney += valueLeft;
+            moneyHud.text = currentMoney.ToString();
+        }
+        for (int i = 1; i <= multiplier; i++)
+        {
+            currentMoney += 222;
+            moneyHud.text = currentMoney.ToString();
+            yield return null;
+        }
     }
 
     IEnumerator proceedNextScene(AsyncOperation operation, bool auto = false)
@@ -84,36 +143,5 @@ public class game_manager : MonoBehaviour
             yield return null;
         }
 
-    }
-    IEnumerator startClock()
-    {
-        while (true)
-        {
-            if (GameManager.hour < 12)
-            {
-                clock.text = string.Format("{0}:{1} am", LeadingZero(GameManager.hour), LeadingZero(GameManager.sec));
-            }
-            else
-            {
-                clock.text = string.Format("{0}:{1} pm", LeadingZero(GameManager.hour), LeadingZero(GameManager.sec));
-            }
-
-            yield return new WaitForSeconds(1.5f);
-            GameManager.sec++;
-            if (GameManager.sec == 60)
-            {
-                GameManager.hour++;
-                GameManager.sec = 0;
-            }
-            if (GameManager.hour > 24)
-            {
-                GameManager.hour = 0;
-            }
-        }
-    }
-
-    string LeadingZero(int number)
-    {
-        return number.ToString().PadLeft(2, '0');
     }
 }

@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Data;
-using System.Collections.Generic;
 public class select_random_skit : MonoBehaviour
 {
     private Text text;
