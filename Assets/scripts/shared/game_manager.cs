@@ -52,11 +52,12 @@ public static class GameManager
 
 public class game_manager : MonoBehaviour
 {
-    [SerializeField] private GameObject loadingScreen;
-    [SerializeField] private Slider loadingSlider;
-    [SerializeField] private Text finishedLoadingText;
+    public GameObject loadingScreen;
+    public Slider loadingSlider;
+    public Text finishedLoadingText;
     public Player player;
     public TextMeshProUGUI moneyHud;
+    
     public void loadLevel(int sceneIndex)
     {
         StartCoroutine(load(sceneIndex));
@@ -80,12 +81,6 @@ public class game_manager : MonoBehaviour
 
     public void addMoney(int amount)
     {
-        // AssetDatabase.co
-        // string path = AssetDatabase.GetAssetPath(player.sprite.GetInstanceID());
-        // Texture2D rl = (Texture2D)AssetDatabase.LoadAssetAtPath(path, typeof(Texture2D));
-        // Debug.Log(rl.);
-        // Debug.Log(Resources.Load(AssetDatabase.GetAssetPath(player.sprite.GetInstanceID())));
-        // player.sprite =  as Sprite;
         int lastMoney = GameManager.addMoney(player, amount);
         StartCoroutine(increaseMoney(lastMoney, player.money));
     }

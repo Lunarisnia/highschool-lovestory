@@ -12,6 +12,11 @@ public class LoadGameSelection : MonoBehaviour
     public game_manager gameManager;
     void Start()
     {
+        listOfSaveFiles();
+    }
+
+    private void listOfSaveFiles()
+    {
         RectTransform contentsRect = GetComponent<RectTransform>();
         FileInfo[] files = getAllSaveFiles();
         for (int i = 0; i < files.Length; i++)
