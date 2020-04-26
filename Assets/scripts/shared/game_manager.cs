@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEditor;
 
 public static class GameManager
 {
@@ -30,12 +31,12 @@ public static class GameManager
         stream.Close();
     }
 
-    public static PlayerData loadSave(string playerName)
+    public static PlayerData loadSave(string path)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
-        if (File.Exists(API.getDataPath(playerName)))
+        if (File.Exists(path))
         {
-            FileStream stream = new FileStream(API.getDataPath(playerName), FileMode.Open);
+            FileStream stream = new FileStream(path, FileMode.Open);
 
             PlayerData data = binaryFormatter.Deserialize(stream) as PlayerData;
             stream.Close();
@@ -54,7 +55,7 @@ public class game_manager : MonoBehaviour
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private Text finishedLoadingText;
-    [SerializeField] private Player player;
+    public Player player;
     public TextMeshProUGUI moneyHud;
     public void loadLevel(int sceneIndex)
     {
@@ -66,9 +67,9 @@ public class game_manager : MonoBehaviour
         GameManager.saveGame(player);
     }
 
-    public void loadGame()
+    public void loadGame(string path)
     {
-        PlayerData data = GameManager.loadSave(player.playerName);
+        PlayerData data = GameManager.loadSave(path);
         Transform playerTf = player.GetComponent<Transform>();
         player.money = data.money;
         moneyHud.text = player.money.ToString();
@@ -79,6 +80,12 @@ public class game_manager : MonoBehaviour
 
     public void addMoney(int amount)
     {
+        // AssetDatabase.co
+        // string path = AssetDatabase.GetAssetPath(player.sprite.GetInstanceID());
+        // Texture2D rl = (Texture2D)AssetDatabase.LoadAssetAtPath(path, typeof(Texture2D));
+        // Debug.Log(rl.);
+        // Debug.Log(Resources.Load(AssetDatabase.GetAssetPath(player.sprite.GetInstanceID())));
+        // player.sprite =  as Sprite;
         int lastMoney = GameManager.addMoney(player, amount);
         StartCoroutine(increaseMoney(lastMoney, player.money));
     }

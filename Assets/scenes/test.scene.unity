@@ -2357,6 +2357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182211967}
   - component: {fileID: 1182211966}
+  - component: {fileID: 1182211965}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2364,6 +2365,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1182211965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182211964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218869a98229d704cb4d13d968e609bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1182211966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12521,8 +12534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: PlayersAAA
+  sprite: {fileID: 2645420045059285327, guid: b30505bbca269a34bb9273945ac17fa9, type: 3}
   items:
-  - {fileID: 11400000, guid: b5dbc89ab96940f40b22d39515f7aea2, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
