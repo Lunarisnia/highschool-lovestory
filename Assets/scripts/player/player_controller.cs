@@ -1,17 +1,19 @@
 using UnityEngine;
 public class player_controller : MonoBehaviour
 {
-    private Player player;
+    // private Player player;
     Rigidbody2D playerRb;
     [SerializeField] private float speed;
     [SerializeField] private float runningSpeed;
     private Inventory inventory;
     private Vector2 moveVelocity;
     private Animator animator;
+    public static bool gameIsPaused = false;
+
 
     void Start()
     {
-        player = GetComponent<Player>();
+        // player = GetComponent<Player>();
         inventory = GetComponent<Inventory>();
         playerRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -29,9 +31,30 @@ public class player_controller : MonoBehaviour
 
     void applyInput()
     {
-        move();
-        animate();
-        openInventory();
+        if (!gameIsPaused)
+        {
+            move();
+            animate();
+            openInventory();
+        }
+        pauseGame();
+    }
+
+    void pauseGame()
+    {
+        if (Input.GetButtonDown("Pause"))
+        {
+            if (!gameIsPaused)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+            gameIsPaused = !gameIsPaused;
+        }
+
     }
     void openInventory()
     {

@@ -6,22 +6,22 @@ public class Inventory : MonoBehaviour
 {
     private bool isInventoryOpen = false;
     public TextMeshProUGUI moneyHud;
-    private Player player;
+    // private Player Player;
 
     private void Start() {
-        player = GetComponent<Player>();
+        // Player = GetComponent<Player>();
     }
 
     public int addMoney(int valueAdded)
     {
-        int lastMoney = player.money;
-        player.money += valueAdded;
-        if (player.money > GameManager.maxMoney)
+        int lastMoney = Player.money;
+        Player.money += valueAdded;
+        if (Player.money > GameManager.maxMoney)
         {
-            player.money = GameManager.maxMoney;
+            Player.money = GameManager.maxMoney;
         }
-        StartCoroutine(increaseMoney(lastMoney, player.money));
-        return player.money;
+        StartCoroutine(increaseMoney(lastMoney, Player.money));
+        return Player.money;
     }
 
     IEnumerator increaseMoney(int lastMoney, int newMoney)
@@ -51,7 +51,7 @@ public class Inventory : MonoBehaviour
             {
                 isInventoryOpen = !isInventoryOpen;
                 Debug.Log("OPEN");
-                foreach (var item in player.items)
+                foreach (var item in Player.items)
                 {
                     Debug.Log(item);
                 }

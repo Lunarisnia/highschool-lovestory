@@ -5,28 +5,27 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using UnityEditor;
 
 public static class GameManager
 {
     public static int maxMoney = 999999;
 
-    public static int addMoney(Player player, int amount)
+    public static int addMoney(Player Player, int amount)
     {
-        int lastMoney = player.money;
-        player.money += amount;
-        if (player.money > GameManager.maxMoney)
+        int lastMoney = Player.money;
+        Player.money += amount;
+        if (Player.money > GameManager.maxMoney)
         {
-            player.money = GameManager.maxMoney;
+            Player.money = GameManager.maxMoney;
         }
         return lastMoney;
     }
 
-    public static void saveGame(Player player)
+    public static void saveGame()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
-        FileStream stream = new FileStream(API.getDataPath(player.playerName), FileMode.OpenOrCreate);
-        PlayerData playerData = new PlayerData(player);
+        FileStream stream = new FileStream(API.getDataPath(Player.playerName), FileMode.OpenOrCreate);
+        PlayerData playerData = new PlayerData();
         binaryFormatter.Serialize(stream, playerData);
         stream.Close();
     }
@@ -55,9 +54,9 @@ public class game_manager : MonoBehaviour
     public GameObject loadingScreen;
     public Slider loadingSlider;
     public Text finishedLoadingText;
-    public Player player;
+    public Player Player;
     public TextMeshProUGUI moneyHud;
-    
+
     public void loadLevel(int sceneIndex)
     {
         StartCoroutine(load(sceneIndex));
@@ -65,24 +64,24 @@ public class game_manager : MonoBehaviour
 
     public void saveGame()
     {
-        GameManager.saveGame(player);
+        GameManager.saveGame();
     }
 
     public void loadGame(string path)
     {
         PlayerData data = GameManager.loadSave(path);
-        Transform playerTf = player.GetComponent<Transform>();
-        player.money = data.money;
-        moneyHud.text = player.money.ToString();
-        player.sec = data.sec;
-        player.hour = data.hour;
+        Transform playerTf = Player.GetComponent<Transform>();
+        Player.money = data.money;
+        moneyHud.text = Player.money.ToString();
+        Player.sec = data.sec;
+        Player.hour = data.hour;
         playerTf.position = new Vector3(data.playerPosition[0], data.playerPosition[1], data.playerPosition[2]);
     }
 
     public void addMoney(int amount)
     {
-        int lastMoney = GameManager.addMoney(player, amount);
-        StartCoroutine(increaseMoney(lastMoney, player.money));
+        int lastMoney = GameManager.addMoney(Player, amount);
+        StartCoroutine(increaseMoney(lastMoney, Player.money));
     }
 
     IEnumerator increaseMoney(int lastMoney, int newMoney)

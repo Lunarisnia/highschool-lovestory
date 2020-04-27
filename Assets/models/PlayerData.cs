@@ -5,24 +5,23 @@ using UnityEditor;
 public class PlayerData
 {
     public string playerName = "Player";
-    // public Byte sprite;
     public float[] playerPosition = new float[3];
     public string[] itemPath = new string[10];
     public int money = 0;
     public int sec = 0;
     public int hour = 0;
 
-    public PlayerData(Player player)
+    public PlayerData()
     {
-        playerName = player.playerName;
-        money = player.money;
-        sec = player.sec;
-        hour = player.hour;
-        for (int i = 0; i < player.items.Length; i++)
+        playerName = Player.playerName;
+        money = Player.money;
+        sec = Player.sec;
+        hour = Player.hour;
+        for (int i = 0; i < Player.items.Length; i++)
         {
-            if (player.items[i] != null)
+            if (Player.items[i] != null)
             {
-                string path = AssetDatabase.GetAssetPath(player.items[i]);
+                string path = AssetDatabase.GetAssetPath(Player.items[i]);
                 itemPath[i] = path;
             }
             else
@@ -31,8 +30,8 @@ public class PlayerData
             }
 
         }
-        playerPosition[0] = player.playerPosition.x;
-        playerPosition[1] = player.playerPosition.y;
-        playerPosition[2] = player.playerPosition.z;
+        playerPosition[0] = Player.playerPosition.x;
+        playerPosition[1] = Player.playerPosition.y;
+        playerPosition[2] = Player.playerPosition.z;
     }
 }

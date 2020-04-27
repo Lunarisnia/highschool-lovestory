@@ -4,9 +4,9 @@ using TMPro;
 
 public class ClockManager : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    // [SerializeField] private Player Player;
     public TextMeshProUGUI clock;
-    Coroutine clockRoutine;
+    public Coroutine clockRoutine;
     private void Start()
     {
         clockRoutine = StartCoroutine(startClock());
@@ -15,25 +15,25 @@ public class ClockManager : MonoBehaviour
     {
         while (true)
         {
-            if (player.hour < 12)
+            if (Player.hour < 12)
             {
-                clock.text = string.Format("{0}:{1} am", LeadingZero(player.hour), LeadingZero(player.sec));
+                clock.text = string.Format("{0}:{1} AM", LeadingZero(Player.hour), LeadingZero(Player.sec));
             }
             else
             {
-                clock.text = string.Format("{0}:{1} pm", LeadingZero(player.hour), LeadingZero(player.sec));
+                clock.text = string.Format("{0}:{1} PM", LeadingZero(Player.hour), LeadingZero(Player.sec));
             }
 
             yield return new WaitForSeconds(1.5f);
-            player.sec++;
-            if (player.sec == 60)
+            Player.sec++;
+            if (Player.sec == 60)
             {
-                player.hour++;
-                player.sec = 0;
+                Player.hour++;
+                Player.sec = 0;
             }
-            if (player.hour > 24)
+            if (Player.hour >= 24)
             {
-                player.hour = 0;
+                Player.hour = 0;
             }
         }
     }
