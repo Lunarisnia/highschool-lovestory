@@ -40,7 +40,7 @@ public class player_controller : MonoBehaviour
         pauseGame();
     }
 
-    void pauseGame()
+    public void pauseGame()
     {
         if (Input.GetButtonDown("Pause"))
         {

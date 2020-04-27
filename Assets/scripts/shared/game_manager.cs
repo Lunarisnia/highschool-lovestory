@@ -56,6 +56,21 @@ public class game_manager : MonoBehaviour
     public Text finishedLoadingText;
     public Player Player;
     public TextMeshProUGUI moneyHud;
+    public CursorSet cursors;
+
+    private void Awake() {
+        setCursorNorm();
+    }
+    
+    public void setCursorNorm()
+    {
+        Cursor.SetCursor(cursors.normalCursor, Vector2.zero, CursorMode.ForceSoftware);
+    }
+
+    public void setCursorSelecting()
+    {
+        Cursor.SetCursor(cursors.selectingCursor, Vector2.zero, CursorMode.ForceSoftware);
+    }
 
     public void loadLevel(int sceneIndex)
     {

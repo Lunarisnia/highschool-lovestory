@@ -9,8 +9,10 @@ public class DialogueManager : MonoBehaviour
     private Queue<Sprite> portraits = new Queue<Sprite>();
     public TextMeshProUGUI textMesh;
     public Image portraitHolder;
+    public GameObject textDialog;
     public void startDialogue(Dialogue dialogue)
     {
+        textDialog.SetActive(true);
         sentences.Clear();
         portraits.Clear();
         foreach (var sentence in dialogue.sentences)
@@ -22,6 +24,8 @@ public class DialogueManager : MonoBehaviour
             portraits.Enqueue(portrait);
         }
 
+        Time.timeScale = 0f;
+        player_controller.gameIsPaused = true;
         displayNextSentence();
     }
 
@@ -45,6 +49,7 @@ public class DialogueManager : MonoBehaviour
             Sprite portrait = portraits.Dequeue();
             foreach (var item in sentence)
             {
+                //TODO : MAKE IT SKIP TO ALL MESSAGE BUT NOT TO THE NEXT WHEN A BUTTON IS PRESSED WHILE THIS RUN
                 portraitHolder.sprite = portrait;
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
@@ -67,6 +72,8 @@ public class DialogueManager : MonoBehaviour
     public void endDialog()
     {
         // close the dialog bar
-        Debug.Log("End dialog");
+        Time.timeScale = 1f;
+        player_controller.gameIsPaused = false;
+        textDialog.SetActive(false);
     }
 }

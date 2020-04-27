@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac1b7d1a47ca6b4bbba2a3860c26b62, type: 3}
   m_Name: 02
   m_EditorClassIdentifier: 
-  speakerName: 
-  sentences: []
-  portraits: []
+  speakerName: Ichigo
+  sentences:
+  - Vivamus aliquam sem et ultrices ultricies. Cras rhoncus metus a cursus pharetra.
+    Suspendisse a nibh at orci lobortis faucibus vitae eu est. Suspendisse faucibus
+    in enim posuere iaculis.
+  - Nunc fringilla ante ultrices lectus dignissim, ac cursus enim molestie. Etiam
+    feugiat aliquet dolor, eu pulvinar magna commodo vel.
+  - Aenean eget rutrum lacus. Curabitur fermentum orci at condimentum tempus. Ut
+    placerat, sapien eu mollis condimentum, dolor turpis consectetur nunc, vitae
+    ultrices lorem arcu quis metus.
+  portraits:
+  - {fileID: 4950613598572397062, guid: 980b05934363d8941ada092716cc6023, type: 3}
+  - {fileID: 358597323720185724, guid: 980b05934363d8941ada092716cc6023, type: 3}
+  - {fileID: 7464984475462396819, guid: 980b05934363d8941ada092716cc6023, type: 3}

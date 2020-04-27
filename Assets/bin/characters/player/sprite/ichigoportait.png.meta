@@ -4,28 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3943498380651042263
-    second: ichigoportait_0
+    second: ichigonormal
   - first:
       213: 9051286487888873593
-    second: ichigoportait_1
+    second: ichigohappy
   - first:
       213: 4833106769122596120
-    second: ichigoportait_2
+    second: ichigosurprised
   - first:
       213: 4950613598572397062
-    second: ichigoportait_3
+    second: ichigoangery
   - first:
       213: 4874220785345180546
-    second: ichigoportait_4
+    second: ichigosad01
   - first:
       213: 358597323720185724
-    second: ichigoportait_5
+    second: ichigosad02
   - first:
       213: 7464984475462396819
-    second: ichigoportait_6
+    second: ichigomad01
   - first:
       213: 7493180999890022352
-    second: ichigoportait_7
+    second: ichigomad02
+  - first:
+      213: 231121565322033715
+    second: ichigonormal
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -146,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ichigoportait_0
+      name: ichigonormal
       rect:
         serializedVersion: 2
         x: 171
@@ -154,7 +157,7 @@ TextureImporter:
         width: 364
         height: 374
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ichigoportait_1
+      name: ichigohappy
       rect:
         serializedVersion: 2
         x: 636
@@ -175,7 +178,7 @@ TextureImporter:
         width: 364
         height: 374
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ichigoportait_2
+      name: ichigosurprised
       rect:
         serializedVersion: 2
         x: 1088
@@ -196,7 +199,7 @@ TextureImporter:
         width: 364
         height: 374
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ichigoportait_3
+      name: ichigoangery
       rect:
         serializedVersion: 2
         x: 1542
@@ -217,7 +220,7 @@ TextureImporter:
         width: 364
         height: 374
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ichigoportait_4
+      name: ichigosad01
       rect:
         serializedVersion: 2
         x: 170
@@ -238,7 +241,7 @@ TextureImporter:
         width: 364
         height: 373
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ichigoportait_5
+      name: ichigosad02
       rect:
         serializedVersion: 2
         x: 634
@@ -259,7 +262,7 @@ TextureImporter:
         width: 364
         height: 373
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ichigoportait_6
+      name: ichigomad01
       rect:
         serializedVersion: 2
         x: 1090
@@ -280,7 +283,7 @@ TextureImporter:
         width: 364
         height: 373
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ichigoportait_7
+      name: ichigomad02
       rect:
         serializedVersion: 2
         x: 1546
@@ -301,7 +304,7 @@ TextureImporter:
         width: 364
         height: 373
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,6 +312,27 @@ TextureImporter:
       bones: []
       spriteID: 0dfa6283b602df760800000000000000
       internalID: 7493180999890022352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ichigosad
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 49
+        width: 154
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ab3f0d6db153300800000000000000
+      internalID: 231121565322033715
       vertices: []
       indices: 
       edges: []
