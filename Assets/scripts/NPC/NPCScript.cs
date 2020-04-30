@@ -15,7 +15,7 @@ public class NPCScript : MonoBehaviour
         {
             if (Time.timeScale > 0)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(1))
                 {
                     gameObject.GetComponent<DialogueTrigger>().triggerDialog();
                 }

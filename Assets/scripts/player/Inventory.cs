@@ -6,11 +6,6 @@ public class Inventory : MonoBehaviour
 {
     private bool isInventoryOpen = false;
     public TextMeshProUGUI moneyHud;
-    // private Player Player;
-
-    private void Start() {
-        // Player = GetComponent<Player>();
-    }
 
     public int addMoney(int valueAdded)
     {

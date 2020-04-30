@@ -2553,7 +2553,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   moneyHud: {fileID: 991583410}
   cursors:
-    normalCursor: {fileID: 2800000, guid: fc456f82b2702b94ebba2adf199956dc, type: 3}
+    normalCursor: {fileID: 2800000, guid: 11355513d4edf974eaaf2541d9773f11, type: 3}
     selectingCursor: {fileID: 2800000, guid: fc456f82b2702b94ebba2adf199956dc, type: 3}
 --- !u!4 &1182211967
 Transform:
@@ -12391,7 +12391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1660149601
 RectTransform:
   m_ObjectHideFlags: 0

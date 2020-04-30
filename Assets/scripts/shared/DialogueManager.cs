@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI textMesh;
     public Image portraitHolder;
     public GameObject textDialog;
+    private bool textOnIteration = false;
     public void startDialogue(Dialogue dialogue)
     {
         textDialog.SetActive(true);
@@ -31,7 +32,14 @@ public class DialogueManager : MonoBehaviour
 
     public void displayNextSentence()
     {
-        StartCoroutine(iterateSentence());
+        if (!textOnIteration)
+        {
+            StartCoroutine(iterateSentence());
+        }
+        else
+        {
+            textOnIteration = !textOnIteration;
+        }
     }
     public IEnumerator iterateSentence()
     {
@@ -44,26 +52,35 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
             textMesh.text = "";
+            if (!textOnIteration)
+            {
+                textOnIteration = !textOnIteration;
+            }
 
             string sentence = sentences.Dequeue();
             Sprite portrait = portraits.Dequeue();
             foreach (var item in sentence)
             {
-                //TODO : MAKE IT SKIP TO ALL MESSAGE BUT NOT TO THE NEXT WHEN A BUTTON IS PRESSED WHILE THIS RUN
                 portraitHolder.sprite = portrait;
-                if (Input.GetKeyDown(KeyCode.Return))
+
+                if (textOnIteration)
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        // TODO : make the dialog skipable when clicking anywhere on the screen
+                        displayNextSentence();
+                    }
+                    textMesh.text = textMesh.text + item;
+                }
+                else
                 {
                     textMesh.text = sentence;
                     yield return null;
                     break;
                 }
-                else
-                {
-                    textMesh.text = textMesh.text + item;
-                }
-
                 yield return null;
             }
+            textOnIteration = false;
             yield return null;
             break;
         }
@@ -71,7 +88,6 @@ public class DialogueManager : MonoBehaviour
 
     public void endDialog()
     {
-        // close the dialog bar
         Time.timeScale = 1f;
         player_controller.gameIsPaused = false;
         textDialog.SetActive(false);
